@@ -226,6 +226,7 @@ async function manual_db(id, expiry){
 app.put('/cachetimer/:id', (req, res) => {
     const id = req.params.id;
     start_timer(id);
+    console.log('Data inserted successfully:', id);
     res.status(200).json();
 });
 
