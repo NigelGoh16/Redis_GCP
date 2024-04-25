@@ -50,7 +50,7 @@ client.on('publish', message => console.log(message));
     await client.connect();
     await client.configSet(parameter = "notify-keyspace-events", value = "KEx")
     .then(console.log(await client.configGet(parameter = "notify-keyspace-events")));
-    await client.configSet(parameter = "active-expire-effort", value = "10");
+    // await client.configSet(parameter = "active-expire-effort", value = "10");
 
     await subscriber.connect();
     await subscriber.subscribe('__keyevent@0__:expired', (id) => {
