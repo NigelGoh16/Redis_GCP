@@ -26,7 +26,7 @@ const client = redis.createClient({
     socket: {
         url: '10.61.205.227',
         port: 6379
-  }
+    }
 });
 // const client = redis.createClient({ 
 //     url: 'redis://localhost:6379' 
@@ -35,7 +35,7 @@ const subscriber = client.duplicate();
 
 client.on('connect', () => {
   console.log('Connected to Redis server successfully!');
-  client.set("test_data", "hi", options = {EX: 10});
+  client.set("1", "hi", options = {EX: 10});
 });
 
 client.on('error', (error) => {
