@@ -78,7 +78,7 @@ client.on('publish', message => console.log(message));
 // })
 
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: '127.0.0.1:22',
     user: 'root',
     password: '',
     database: 'test'
