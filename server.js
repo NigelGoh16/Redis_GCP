@@ -74,12 +74,12 @@ client.on('publish', message => console.log(message));
 //     get_redis("test_data");
 // })
 
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'test'
-});
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     database: 'test'
+// });
 
 // let current_key = [];
 let current_key = 0;
