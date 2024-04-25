@@ -55,6 +55,7 @@ client.on('publish', message => console.log(message));
     await subscriber.connect();
     await subscriber.subscribe('__keyevent@0__:expired', (id) => {
         manual_db(id, expiry = true);
+        console.log("subscribed to expire event");
     });
 
     // await client.publish('__key*__:*', 'message');
