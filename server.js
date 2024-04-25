@@ -223,7 +223,7 @@ async function manual_db(id, expiry){
     }
 }
 
-app.use('/admin', function (req, res, next) { // GET 'http://www.example.com/admin/new?a=b'
+app.get('/admin', function (req, res, next) { // GET 'http://www.example.com/admin/new?a=b'
   console.log(req.originalUrl) // '/admin/new?a=b' (WARNING: beware query string)
   console.log(req.baseUrl) // '/admin'
   console.log(req.path) // '/new'
