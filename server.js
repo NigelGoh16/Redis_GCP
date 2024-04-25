@@ -223,6 +223,14 @@ async function manual_db(id, expiry){
     }
 }
 
+app.use('/admin', function (req, res, next) { // GET 'http://www.example.com/admin/new?a=b'
+  console.dir(req.originalUrl) // '/admin/new?a=b' (WARNING: beware query string)
+  console.dir(req.baseUrl) // '/admin'
+  console.dir(req.path) // '/new'
+  console.dir(req.baseUrl + req.path) // '/admin/new' (full path without query string)
+  next()
+})
+
 app.put('/cachetimer/:id', (req, res) => {
     const id = req.params.id;
     start_timer(id);
