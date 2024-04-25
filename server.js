@@ -35,12 +35,14 @@ const subscriber = client.duplicate();
 
 client.on('connect', () => {
   console.log('Connected to Redis server successfully!');
-//   client.set("test_data", "hi", options = {EX: 10});
+  client.set("test_data", "hi", options = {EX: 10});
 });
 
 client.on('error', (error) => {
   console.error('Redis client encountered an error:', error);
 });
+
+subscriber.on('connect', () => console.log('Subscribed to Redis server successfully!'));
 
 subscriber.on('error', err => console.error(err));
 
