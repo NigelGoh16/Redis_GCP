@@ -24,7 +24,7 @@ verify().catch(console.error);
 const redis = require('redis');
 const client = redis.createClient({ 
     socket: {
-        url: '10.226.178.59',
+        url: '10.61.205.227',
         port: 6379
   }
 });
