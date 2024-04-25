@@ -35,7 +35,7 @@ const subscriber = client.duplicate();
 
 client.on('connect', () => {
   console.log('Connected to Redis server successfully!');
-  client.set("1", "hi", options = {EX: 10});
+//   client.set("1", "hi", options = {EX: 10});
 });
 
 client.on('error', (error) => {
@@ -126,7 +126,7 @@ const minInterval = 0.1; // Minimum interval in minutes
 const maxInterval = 0.2; // Maximum interval in minutes
 const targetExecutions = 50000; // Target number of executions
 
-setTimeout(function(){ runFunctionAtRandomIntervals(db_completion, minInterval, maxInterval, targetExecutions) }, (5 * 60 * 1000));
+// setTimeout(function(){ runFunctionAtRandomIntervals(db_completion, minInterval, maxInterval, targetExecutions) }, (5 * 60 * 1000));
 
 async function db_completion(){
     const id = Math.floor((Math.random() * 300) + (current_key + 1));
