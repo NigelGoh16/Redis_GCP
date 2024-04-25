@@ -224,10 +224,10 @@ async function manual_db(id, expiry){
 }
 
 app.use('/admin', function (req, res, next) { // GET 'http://www.example.com/admin/new?a=b'
-  console.dir(req.originalUrl) // '/admin/new?a=b' (WARNING: beware query string)
-  console.dir(req.baseUrl) // '/admin'
-  console.dir(req.path) // '/new'
-  console.dir(req.baseUrl + req.path) // '/admin/new' (full path without query string)
+  console.log(req.originalUrl) // '/admin/new?a=b' (WARNING: beware query string)
+  console.log(req.baseUrl) // '/admin'
+  console.log(req.path) // '/new'
+  console.log(req.baseUrl + req.path) // '/admin/new' (full path without query string)
   next()
 })
 
